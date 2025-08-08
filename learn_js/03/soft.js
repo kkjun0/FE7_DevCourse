@@ -9,14 +9,12 @@ for (let i = 1; i <= 9; i++) {
 
 // 3
 for (let i = -1; i <= 100; i++) {
-  if (i % 2 === 0 && !(i === 0)) continue;
-  console.log(i);
+  if (i % 2 === 0 && !(i === 0)) console.log(i);
 }
 
 // 4
 let sum1 = 0;
 let numArr = [10, -10, 20, -30, 40];
-sum1 = 0;
 for (const v of numArr) {
   if (v > 0) sum1 = v;
 }
@@ -33,8 +31,8 @@ for (let i = 0; i <= 15; i++) {
 
 // 6
 const numArr1 = [7, 2, 9, 4, 5];
-let max = 0;
-for (v of numArr1) {
+let max = numArr1[0];
+for (const v of numArr1) {
   if (max < v) max = v;
 }
 console.log(max);
@@ -42,7 +40,7 @@ console.log(max);
 // 7
 const arr = ['a', 'b', 'c', 'd', 'e'];
 const arr2 = [];
-for (i in arr) {
+for (const i in arr) {
   if (i % 2 === 0) {
     arr2.push(arr[i]);
   }
@@ -50,5 +48,5 @@ for (i in arr) {
 
 // 8
 for (let i = 1; i <= 9; i++) {
-  console.log(`3 X ${i} = ${i * 3}`);
+  console.log(`3 X ${i} = ${3 * i}`);
 }
