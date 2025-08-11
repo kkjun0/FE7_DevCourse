@@ -33,23 +33,28 @@ function containsNumber(arr, num) {
 containsNumber([1, 2, 3, 4, 5], 5); // true
 containsNumber([1, 2, 3, 4, 5], 7); // false
 
-4;
+// 4
+// function isAnagrams(str1, str2) {
+//   let th = null;
+//   let check = false;
+//   if (str1.length !== str2.length) console.log(tf);
+//   else {
+//     for (let i = 0; i < str1.length; i++) {
+//       check = false;
+//       for (let j = 0; j < str2.length; j++) {
+//         if (str1[i] === str2[j]) {
+//           check = true;
+//         }
+//       }
+//       tf = check;
+//     }
+//     console.log(check);
+//   }
+// }
+
 function isAnagrams(str1, str2) {
-  let th = null;
-  let check = false;
-  if (str1.length !== str2.length) console.log(tf);
-  else {
-    for (let i = 0; i < str1.length; i++) {
-      check = false;
-      for (let j = 0; j < str2.length; j++) {
-        if (str1[i] === str2[j]) {
-          check = true;
-        }
-      }
-      tf = check;
-    }
-    console.log(check);
-  }
+  let arr1,
+    arr2 = [];
 }
 
 isAnagrams('listen', 'silent'); // true
