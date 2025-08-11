@@ -53,8 +53,67 @@ containsNumber([1, 2, 3, 4, 5], 7); // false
 // }
 
 function isAnagrams(str1, str2) {
-  let arr1,
-    arr2 = [];
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  const alphabet = [
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'f',
+    'g',
+    'h',
+    'i',
+    'j',
+    'k',
+    'l',
+    'm',
+    'n',
+    'o',
+    'p',
+    'q',
+    'r',
+    's',
+    't',
+    'u',
+    'v',
+    'w',
+    'x',
+    'y',
+    'z',
+  ];
+  const count1 = [];
+  const count2 = [];
+  for (let i = 0; i < 26; i++) {
+    count1[i] = 0;
+    count2[i] = 0;
+  }
+  for (let i = 0; i < str1.length; i++) {
+    let ch = str1[i];
+    for (let j = 0; j < 26; j++) {
+      if (ch === alphabet[j]) {
+        count1[j]++;
+        break;
+      }
+    }
+  }
+  for (let i = 0; i < str2.length; i++) {
+    let ch = str2[i];
+    for (let j = 0; j < 26; j++) {
+      if (ch === alphabet[j]) {
+        count2[j]++;
+        break;
+      }
+    }
+  }
+  for (let i = 0; i < 26; i++) {
+    if (count1[i] !== count2[i]) {
+      return false;
+    }
+  }
+  return true;
 }
 
 isAnagrams('listen', 'silent'); // true
