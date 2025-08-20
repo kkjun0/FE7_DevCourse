@@ -1,5 +1,7 @@
 // 1. `Account` 클래스를 만드세요.
-
+// - 프라이빗 필드 `#balance` (초기값 0).
+// - `deposit(amount)`, `withdraw(amount)`는 0보다 큰 숫자만 허용, 부족하면 Error.
+// - `balance`는 **getter**로만 제공.
 class Account {
   #balance = 0;
   deposit(amount) {
