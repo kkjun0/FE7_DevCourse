@@ -31,7 +31,7 @@ const getAllWeatherIconsAsync = async () => {
 
 const getAllWeatherIconsAsyncs = async () => {
   console.time();
-  const [sun, wave, cloud] = await Promise.all([
+  const [sun, wave, cloud] = await Promise.allSettled([
     getSunIcon(),
     getWaveIcon(),
     getCloudIcon(),
