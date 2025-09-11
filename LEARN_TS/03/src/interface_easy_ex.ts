@@ -15,15 +15,16 @@
   interface Car {
     brand: string;
     model: string;
-    start(): void;
+    start(this: Car, speed: number): void;
   }
   const car: Car = {
     brand: 'KIA',
     model: 'sorento',
-    start() {
-      console.log('출발!');
+    start(this, speed) {
+      console.log(`${this.brand}, ${speed}`);
     },
   };
+  car.start(100);
 }
 
 {
@@ -81,8 +82,8 @@
   const p1: Person = {
     name: 'jun',
     age: 23,
-    greet() {
-      return `Hello, my name is ${name}`;
+    greet(this: Person) {
+      return `Hello, my name is ${this.name}`;
     },
   };
 }
@@ -99,6 +100,12 @@
   interface Circle extends Shape {
     radius: number;
   }
+  const circle: Circle = {
+    radius: 10,
+    area(this: Circle) {
+      return Math.PI * this.radius * this.radius;
+    },
+  };
 }
 
 {
@@ -129,4 +136,18 @@
   }
   const add: Operation = (a, b) => a + b;
   const subtract: Operation = (a, b) => a / b;
+}
+
+{
+  interface Operation {
+    (a: number, b: number): number;
+    name: string;
+    length: number;
+    caller: any;
+    arguments: any[];
+  }
+
+  type Fn = (a: number, b: number) => number;
+  const add: Fn = (a, b) => a + b;
+  const subtract: Operation = (a, b) => a - b;
 }
