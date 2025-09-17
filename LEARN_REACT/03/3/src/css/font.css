@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'KoldiWebtoonMakerOngleifFont';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2508-2@1.0/Ownglyph_Coldywebtoonmaker-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  /* 사용할 폰트의 이름을 정의 */
+  font-family: "JejuDoldam";
+  /* 폰트 파일의 위치 */
+  src: url("../assets/fonts/doldam.woff2"), url("../assets/fonts/doldam.woff");
+}
+
+.nanum-pen-script-regular {
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.KoldiWebtoon {
+  font-family: "KoldiWebtoonMakerOngleifFont";
+}
